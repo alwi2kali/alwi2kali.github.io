@@ -51,14 +51,18 @@ Tautan langsung bisa dibagikan, misalnya `https://namadomain/#diresepin` membuka
 
 LinkedIn menyimpan pratinjau lama di cache. Perbarui lewat https://www.linkedin.com/post-inspector/.
 
-## Deploy gratis ke Cloudflare Pages
+## Alamat utama: GitHub Pages
 
-Situs live di https://alwibahar.pages.dev. Untuk memperbarui setelah mengubah isi:
+Situs utama ada di https://alwi2kali.github.io, dilayani langsung dari branch `main` repository ini. Setiap `git push` otomatis memperbarui situs dalam satu-dua menit.
+
+Alamat ini dipakai untuk LinkedIn karena LinkedIn menandai semua alamat `*.pages.dev` sebagai berbahaya.
+
+## Cadangan: Cloudflare Pages
+
+Salinan yang sama juga ada di https://alwibahar.pages.dev. Untuk memperbaruinya:
 
 ```bash
 npm run deploy
 ```
 
 Perintah ini menyalin file situs ke `dist/` lalu mengunggahnya dengan Wrangler. Saat pertama kali, jalankan `npx wrangler@3 login` untuk masuk ke akun Cloudflare. Wrangler versi 3 dipakai karena versi 4 butuh Node.js 22.
-
-Domain sendiri (misalnya `.my.id`) bisa ditambahkan di tab **Custom domains** pada proyek `alwibahar` di dashboard Cloudflare.
