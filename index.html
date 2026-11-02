@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alwi Bahar · Fullstack Developer</title>
+<meta name="description" content="Portofolio interaktif Alwi Bahar, fullstack developer dari Sulawesi Selatan. Jelajahi kampung untuk melihat skill, riwayat kerja, dan produk D Group: Dicatetin, Diresepin, Dijadwalin.">
+<meta property="og:title" content="Alwi Bahar · Fullstack Developer">
+<meta property="og:description" content="Jelajahi kampung portofolio: skill, riwayat kerja, dan produk D Group.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#4F7A33">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cellipse cx='16' cy='18' rx='10' ry='12' fill='%23FAC775' stroke='%23BA7517' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<svg id="world" role="application" aria-label="Peta kampung portofolio. Gunakan menu cepat untuk langsung membuka isi."></svg>
+
+<header class="hud">
+  <div class="brand"><span class="avatar">AB</span><div><strong>Alwi Bahar</strong><span>Fullstack Developer</span></div></div>
+  <div class="hud-actions">
+    <div class="eggs" id="eggs" title="Telur terkumpul dari tempat yang sudah dikunjungi"></div>
+    <button class="round" id="btn-night" aria-label="Ubah ke malam"></button>
+    <button class="btn" id="btn-ringkas"><i class="ti ti-file-text" aria-hidden="true"></i><span>Mode ringkas</span></button>
+  </div>
+</header>
+
+<nav class="quicknav" aria-label="Menu cepat">
+  <button data-nav="about"><i class="ti ti-home" aria-hidden="true"></i><span>Tentang</span></button>
+  <button data-nav="skills"><i class="ti ti-plant-2" aria-hidden="true"></i><span>Skill</span></button>
+  <button data-nav="products"><i class="ti ti-building-community" aria-hidden="true"></i><span>Produk</span></button>
+  <button data-nav="timeline"><i class="ti ti-route" aria-hidden="true"></i><span>Riwayat</span></button>
+  <button data-nav="contact"><i class="ti ti-message-circle" aria-hidden="true"></i><span>Kontak</span></button>
+</nav>
+
+<div class="prompt" id="prompt" hidden>
+  <div><strong id="prompt-title"></strong><span id="prompt-sub"></span></div>
+  <button class="btn primary" id="prompt-open">Masuk <kbd>E</kbd></button>
+</div>
+
+<aside class="panel" id="panel" role="dialog" aria-labelledby="panel-title" hidden>
+  <button class="round panel-close" aria-label="Tutup"><i class="ti ti-x" aria-hidden="true"></i></button>
+  <div id="panel-body"></div>
+</aside>
+
+<main class="ringkas" id="ringkas" hidden></main>
+
+<div class="modal-backdrop" id="welcome" hidden>
+  <div class="modal" role="dialog" aria-labelledby="welcome-title">
+    <span class="avatar big">AB</span>
+    <h1 id="welcome-title">Selamat datang di kampung saya</h1>
+    <p>Saya Alwi Bahar, fullstack developer dari Sulawesi Selatan. Portofolio ini berbentuk kampung kecil: setiap bangunan berisi bagian dari cerita saya.</p>
+    <ul class="howto">
+      <li><i class="ti ti-keyboard" aria-hidden="true"></i> Jalan dengan panah atau WASD, atau ketuk tujuan di peta</li>
+      <li><i class="ti ti-pointer" aria-hidden="true"></i> Klik bangunan mana saja untuk langsung membukanya</li>
+      <li><i class="ti ti-egg" aria-hidden="true"></i> Setiap tempat yang dikunjungi memberi satu telur</li>
+    </ul>
+    <div class="actions">
+      <button class="btn primary" id="welcome-start">Mulai jelajah</button>
+      <button class="btn" id="welcome-ringkas">Lihat versi ringkas</button>
+    </div>
+  </div>
+</div>
+
+<noscript><p class="noscript">Portofolio ini membutuhkan JavaScript. Alwi Bahar, fullstack developer: Laravel, Flutter, MySQL, PostgreSQL. Produk: Dicatetin (dicatetin.com), Diresepin (diresepin.com).</p></noscript>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
