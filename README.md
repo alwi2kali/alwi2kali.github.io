@@ -19,11 +19,9 @@ Semua teks ada di [`js/content.js`](js/content.js). Isian yang dikosongkan (`''`
 Yang masih perlu diisi:
 
 - `profile.photo` dan `profile.cv` (taruh file di folder ini, misalnya `img/alwi.jpg` dan `cv-alwi-bahar.pdf`)
-- `contact.email`, `contact.whatsapp`, `contact.github`
-- `jobs[].period` (tahun) dan nama rumah sakit di `jobs[0].org`
+- Periode dan nama rumah sakit di entri `rs` pada `jobs` (tidak ada di CV)
 - `team`: nama dan peran tiga rekan D Group
 - `products`: peran, teknologi, dan URL untuk Dicatetin, Dikasirin, dan aplikasi travel
-- Periksa ulang daftar `skills` dan `experiments`
 
 ## Fungsi setiap tempat
 
@@ -37,7 +35,7 @@ Yang masih perlu diisi:
 | Gapura D Group | Holding dan semua produk | `#gapura` |
 | Baruga | Tim D Group | `#baruga` |
 | Rumah-rumah di kompleks | Detail tiap produk | `#dicatetin`, `#diresepin`, `#dijadwalin`, `#dikasirin`, `#travel` |
-| Rumah sakit, Kantor KBI | Riwayat kerja | `#rs`, `#kbi` |
+| Gedung di sisi kota | Riwayat kerja dan pendidikan | `#rs`, `#kbi`, `#pilarmedia`, `#freelance`, `#umi` |
 | Pos ronda | Kontak | `#posronda` |
 | Mode ringkas | Semua isi dalam satu halaman biasa | `#ringkas` |
 

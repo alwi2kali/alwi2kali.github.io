@@ -18,6 +18,9 @@ export const places = [
   { id: 'travel', label: 'Travel', panel: 'product', f: [428, 440, 88, 100], door: [472, 556] },
   { id: 'rs', label: 'Rumah sakit', panel: 'job', f: [571, 92, 103, 82], door: [559, 134] },
   { id: 'kbi', label: 'Kantor KBI', panel: 'job', f: [571, 232, 103, 92], door: [559, 278] },
+  { id: 'pilarmedia', label: 'Pilarmedia', panel: 'job', f: [571, 365, 103, 60], door: [559, 395] },
+  { id: 'freelance', label: 'Freelance', panel: 'job', f: [571, 455, 103, 58], door: [559, 484] },
+  { id: 'umi', label: 'Kampus UMI', panel: 'job', f: [571, 541, 103, 56], door: [559, 569] },
   { id: 'posronda', label: 'Pos ronda · kontak', title: 'Pos ronda', sub: 'Pukul kentongan untuk memanggil saya', panel: 'contact', f: [58, 520, 56, 42], door: [86, 576] },
 ];
 
@@ -34,7 +37,14 @@ export function isBlocked(x, y, r) {
   return solids.some(([a, b, w, h]) => x > a - r && x < a + w + r && y > b - r && y < b + h + r);
 }
 
-const lamps = [[262, 130], [318, 130], [360, 380], [248, 302], [292, 302], [426, 300], [376, 505], [600, 150], [640, 150], [595, 285], [650, 285], [83, 548], [425, 128]];
+const lamps = [[262, 130], [318, 130], [360, 380], [248, 302], [292, 302], [426, 300], [376, 505], [600, 150], [640, 150], [595, 285], [650, 285], [83, 548], [425, 128], [593, 401], [652, 401], [593, 490], [652, 490], [593, 575], [652, 575]];
+
+// Gedung riwayat di sisi kota: [x, y, lebar, tinggi, atap, dinding, garis].
+const cityRow = [
+  [575, 365, 95, 60, '#534AB7', '#EEEDFE', '#26215C'],
+  [575, 455, 95, 58, '#993C1D', '#FAECE7', '#4A1B0C'],
+  [575, 541, 95, 56, '#3B6D11', '#EAF3DE', '#173404'],
+];
 
 function shop(x, y, w, h, roof, wall, ridge) {
   return `<ellipse cx="${x + w / 2}" cy="${y + h + 2}" rx="${w / 2 + 6}" ry="5" fill="#4F7A33"/>
@@ -158,9 +168,13 @@ ${shop(432, 440, 80, 56, '#5F5E5A', '#D3D1C7', '#2C2C2A')}
 ${shop(575, 92, 95, 82, '#B4B2A9', '#F1EFE8', '#5F5E5A')}
 <rect x="614" y="118" width="18" height="6" fill="#E24B4A"/><rect x="620" y="112" width="6" height="18" fill="#E24B4A"/>
 ${shop(575, 232, 95, 92, '#185FA5', '#B5D4F4', '#0C447C')}${kbiWin}
+${cityRow.map(([x, y, w, h, roof, wall, ridge]) => {
+    const wy = Math.round(y + h * 0.42 + 6);
+    return `${shop(x, y, w, h, roof, wall, ridge)}<rect x="${x + 12}" y="${wy}" width="12" height="10" fill="${ridge}" opacity="0.7"/><rect x="${x + w - 24}" y="${wy}" width="12" height="10" fill="${ridge}" opacity="0.7"/>`;
+  }).join('')}<line x1="622" y1="541" x2="622" y2="521" stroke="#5F5E5A" stroke-width="1.5"/><rect x="622" y="521" width="12" height="4" fill="#E24B4A"/><rect x="622" y="525" width="12" height="4" fill="#FFFFFF"/>
 <path d="M64 528v32M108 528v32" stroke="#5A3A1E" stroke-width="3"/><rect x="58" y="520" width="56" height="14" fill="#A47E4C"/><rect x="80" y="537" width="6" height="18" rx="2" fill="#7A3E1E"/>
 
-${[[214, 70], [22, 268], [180, 590], [40, 610], [640, 570], [640, 420], [505, 590], [230, 585], [470, 240], [150, 520], [-40, 200], [720, 120], [-60, 480], [730, 330]].map(([x, y]) => palm(x, y)).join('')}
+${[[214, 70], [22, 268], [180, 590], [40, 610], [505, 590], [230, 585], [470, 240], [150, 520], [-40, 200], [720, 120], [-60, 480], [730, 330]].map(([x, y]) => palm(x, y)).join('')}
 <rect id="night" x="-1500" y="-1500" width="3680" height="3620" fill="#0B1E3F" opacity="0" pointer-events="none"/>
 <g id="lamps" opacity="0" pointer-events="none">${lamps.map(([x, y]) => `<circle cx="${x}" cy="${y}" r="8" fill="#FAC775" opacity="0.3"/><circle cx="${x}" cy="${y}" r="2.5" fill="#FFF1C1"/>`).join('')}</g>
 <g id="chickens"></g>

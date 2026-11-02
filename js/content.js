@@ -4,34 +4,35 @@
 export const profile = {
   name: 'Alwi Bahar',
   role: 'Fullstack Developer',
-  location: 'Sulawesi Selatan, Indonesia',
+  location: 'Makassar, Sulawesi Selatan',
   tagline: 'Anak petani dan peternak ayam dari kampung, kini membangun software untuk usaha di Indonesia.',
   about: [
     'Saya tumbuh di sebuah kampung di Sulawesi Selatan. Orang tua saya petani sekaligus peternak ayam, dan dari mereka saya belajar bahwa hasil yang baik datang dari kerja yang telaten setiap hari.',
-    'Karier saya dimulai sebagai IT helpdesk di rumah sakit. Sekarang saya fullstack developer di KBI, dan bersama tiga rekan di D Group membangun serta memasarkan aplikasi untuk usaha: laundry, apotek, kasir, travel, dan booking.',
+    'Saya lulus cum laude dari Ilmu Komputer Universitas Muslim Indonesia, lalu memulai karier sebagai IT helpdesk di rumah sakit. Sejak 2021 saya mengerjakan proyek web sebagai freelancer, sempat menjadi web developer kontrak di Pilarmedia, dan sejak 2023 menjadi fullstack developer di Kreasi Binar Indonesia (Bosowa Group).',
+    'Di luar itu, bersama tiga rekan di D Group saya membangun dan memasarkan aplikasi untuk usaha: laundry, apotek, kasir, travel, dan booking.',
   ],
   photo: '', // contoh: 'img/alwi.jpg'
   cv: '', // contoh: 'cv-alwi-bahar.pdf'
 };
 
 export const contact = {
-  email: '',
-  whatsapp: '', // format internasional tanpa +, contoh: '6281234567890'
-  github: '',
+  email: 'alwibahar2@gmail.com',
+  whatsapp: '6285276858190', // format internasional tanpa +
+  github: 'https://github.com/alwi2kali',
   linkedin: 'https://www.linkedin.com/in/alwi-bahar-b50a54237/',
 };
 
 // Sembilan petak sawah = sembilan kelompok skill (urutan kiri-atas ke kanan-bawah).
 export const skills = [
-  { name: 'Backend', icon: 'server-2', items: ['Laravel', 'PHP 8.3', 'REST API & Sanctum', 'Queue & Horizon', 'Spatie Permission (RBAC)'] },
-  { name: 'Mobile', icon: 'device-mobile', items: ['Flutter', 'BLoC', 'POS mobile offline'] },
-  { name: 'Database', icon: 'database', items: ['MySQL 8', 'PostgreSQL', 'Redis'] },
-  { name: 'Frontend', icon: 'layout', items: ['Blade', 'Tailwind CSS', 'Bootstrap 5', 'JavaScript', 'Vite'] },
-  { name: 'Integrasi', icon: 'plug-connected', items: ['Midtrans & Xendit', 'SatuSehat (rekam medis)', 'Notifikasi WhatsApp'] },
-  { name: 'ERP & akuntansi', icon: 'calculator', items: ['Jurnal double-entry', 'Multi-company & multi-cabang', 'Inventori FEFO & batch'] },
-  { name: 'Kualitas', icon: 'checklist', items: ['PHPUnit', 'TDD', 'Uji end-to-end Playwright'] },
-  { name: 'DevOps', icon: 'cloud-upload', items: ['Docker', 'Git, GitHub & GitLab', 'CI/CD', 'Monitoring aplikasi'] },
-  { name: 'Lainnya', icon: 'tools', items: ['Python', 'Otomasi video tutorial', 'IT support & helpdesk'] },
+  { name: 'Backend', icon: 'server-2', items: ['Laravel', 'NestJS', 'CodeIgniter', 'PHP', 'REST API', 'Queue & Horizon'] },
+  { name: 'Frontend', icon: 'layout', items: ['Angular', 'JavaScript & TypeScript', 'jQuery', 'HTML5 & CSS3', 'Tailwind & Bootstrap'] },
+  { name: 'Database', icon: 'database', items: ['MySQL', 'PostgreSQL', 'Redis', 'Desain skema & indexing'] },
+  { name: 'Mobile', icon: 'device-mobile', items: ['Flutter', 'BLoC', 'API untuk aplikasi mobile'] },
+  { name: 'ERP & keuangan', icon: 'calculator', items: ['Aplikasi ERP', 'Aplikasi keuangan', 'Jurnal double-entry', 'Inventori FEFO & batch'] },
+  { name: 'Integrasi', icon: 'plug-connected', items: ['Midtrans & Xendit', 'SatuSehat (rekam medis)', 'Notifikasi WhatsApp', 'Integrasi antarsistem'] },
+  { name: 'Keamanan & kualitas', icon: 'shield-check', items: ['Otorisasi multi-role (RBAC)', 'Enkripsi data', 'PHPUnit & TDD', 'Uji end-to-end Playwright'] },
+  { name: 'Kolaborasi & DevOps', icon: 'git-branch', items: ['Git (GitHub & GitLab)', 'Docker', 'CI/CD', 'Dokumentasi API & arsitektur'] },
+  { name: 'Lainnya', icon: 'tools', items: ['Sistem pendukung keputusan (VIKOR)', 'Sistem pakar', 'IT support & helpdesk', 'Python'] },
 ];
 
 export const values = [
@@ -45,8 +46,15 @@ export const experiments = [
   { name: 'Portofolio kampung ini', text: 'Peta interaktif yang sedang kamu jelajahi, dibuat dengan SVG dan JavaScript tanpa framework.', stack: ['SVG', 'JavaScript'] },
 ];
 
-// Riwayat dari yang paling awal.
+// Riwayat dari yang paling awal. id yang sama dengan tempat di peta membuat bangunannya bisa dibuka.
 export const jobs = [
+  {
+    id: 'umi',
+    org: 'Universitas Muslim Indonesia',
+    title: 'S1 Ilmu Komputer',
+    period: 'Sep 2016 – Des 2020',
+    points: ['Lulus cum laude, IPK 3,79 dari 4,00'],
+  },
   {
     id: 'rs',
     org: 'Rumah sakit',
@@ -58,11 +66,41 @@ export const jobs = [
     ],
   },
   {
+    id: 'freelance',
+    org: 'Freelance',
+    title: 'Web Developer',
+    period: '2021 – sekarang',
+    points: [
+      'Sistem pendukung keputusan pemilihan hewan kurban dengan metode VIKOR',
+      'Sistem informasi penjualan dengan metode moving average',
+      'Sistem pakar penyakit gigi dengan metode backward chaining',
+      'Aplikasi absensi, penggajian, dan transaksi barang untuk toko ponsel',
+      'Perbaikan bug penilaian pada aplikasi tryout',
+    ],
+  },
+  {
+    id: 'pilarmedia',
+    org: 'Pilarmedia',
+    title: 'Web Developer (kontrak, remote)',
+    period: 'Jul 2022 – Des 2023',
+    points: [
+      'API autentikasi, manajemen pengguna multi-role, surat jalan, update lokasi, dan laporan untuk web dan aplikasi driver',
+      'API aplikasi mobile tally untuk memindai barang yang tiba di tujuan',
+      'Tampilan Angular untuk pelacakan lokasi driver, mobil, dan barang',
+      'Proyek: PPLI web, Autocargo web dan mobile, LNJT web',
+    ],
+  },
+  {
     id: 'kbi',
-    org: 'KBI',
+    org: 'Kreasi Binar Indonesia (Bosowa Group)',
     title: 'Fullstack Developer',
-    period: 'Sekarang',
-    points: ['Membangun aplikasi web dan mobile dari database sampai deploy'],
+    period: 'Jan 2023 – sekarang',
+    points: [
+      'Membangun aplikasi ERP dan aplikasi keuangan dengan NestJS',
+      'Membangun aplikasi e-commerce dengan Laravel',
+      'Merancang API, mengelola database, keamanan aplikasi, dan integrasi antarsistem',
+      'Menulis dokumentasi kode, API, dan arsitektur untuk tim',
+    ],
   },
   {
     id: 'dgroup',
@@ -155,3 +193,4 @@ export const products = [
     stack: [],
   },
 ];
+

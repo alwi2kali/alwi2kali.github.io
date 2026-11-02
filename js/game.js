@@ -134,6 +134,7 @@ function toWorld(svg, cx, cy) {
 function camera(svg, s) {
   const W = svg.clientWidth;
   const H = svg.clientHeight;
+  if (!W || !H) return; // layar belum punya ukuran (tab tersembunyi)
   const mobile = W < 760;
   const top = mobile ? 64 : 72;
   const bottom = mobile ? 76 : 16;
