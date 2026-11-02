@@ -1,0 +1,47 @@
+<!doctype html>
+<!-- Sumber gambar pratinjau img/og.png (1200x627). Lihat README untuk cara membuat ulang. -->
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  html, body { width: 1200px; height: 627px; overflow: hidden; }
+  #world { position: absolute; inset: 0; width: 1200px; height: 627px; opacity: 1; }
+  .card {
+    position: absolute;
+    left: 36px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 470px;
+    padding: 28px 32px;
+    background: var(--paper);
+    border: 3px solid var(--wood-d);
+    border-radius: 22px;
+    box-shadow: 0 8px 0 rgba(90, 58, 30, 0.45);
+  }
+  .card h1 { font-size: 56px; margin: 0; line-height: 1; }
+  .card .role { font: 700 24px 'Nunito', sans-serif; color: var(--wood); margin: 10px 0 14px; }
+  .card p { font-size: 21px; line-height: 1.45; margin: 0 0 16px; }
+  .card .url { display: inline-block; font: 700 20px 'Nunito', sans-serif; background: var(--accent); color: #fff; padding: 6px 16px; border-radius: 10px; }
+</style>
+</head>
+<body class="ready">
+<svg id="world"></svg>
+<div class="card">
+  <h1>Alwi Bahar</h1>
+  <div class="role">Fullstack Developer · Makassar</div>
+  <p>Jelajahi kampung portofolio saya: skill, riwayat kerja, dan produk D Group seperti Dicatetin dan Diresepin.</p>
+  <span class="url">alwibahar.pages.dev</span>
+</div>
+<script type="module">
+  import { drawWorld } from '../js/world.js';
+  await document.fonts.ready;
+  const svg = document.getElementById('world');
+  drawWorld(svg);
+  svg.setAttribute('viewBox', '-170 30 900 470');
+  svg.querySelector('#hero').setAttribute('transform', 'translate(352,196)');
+  document.body.dataset.done = '1';
+</script>
+</body>
+</html>

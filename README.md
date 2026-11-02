@@ -41,6 +41,16 @@ Yang masih perlu diisi:
 
 Tautan langsung bisa dibagikan, misalnya `https://namadomain/#diresepin` membuka detail Diresepin.
 
+## Gambar pratinjau (LinkedIn, WhatsApp)
+
+`img/og.png` dibuat dari `tools/og.html`. Setelah peta atau teks kartunya berubah, jalankan `node serve.mjs`, lalu:
+
+```bash
+"/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe" --headless=new --hide-scrollbars --window-size=1200,627 --virtual-time-budget=6000 --screenshot="C:\code\portfolio\img\og.png" "http://localhost:5173/tools/og.html"
+```
+
+LinkedIn menyimpan pratinjau lama di cache. Perbarui lewat https://www.linkedin.com/post-inspector/.
+
 ## Deploy gratis ke Cloudflare Pages
 
 Situs live di https://alwibahar.pages.dev. Untuk memperbarui setelah mengubah isi:
