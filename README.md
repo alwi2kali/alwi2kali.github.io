@@ -51,6 +51,6 @@ Situs live di https://alwibahar.pages.dev. Untuk memperbarui setelah mengubah is
 npm run deploy
 ```
 
-Perintah ini menyalin file situs ke `dist/` lalu mengunggahnya dengan Wrangler. Saat pertama kali, jalankan `npx wrangler login` untuk masuk ke akun Cloudflare.
+Perintah ini menyalin file situs ke `dist/` lalu mengunggahnya dengan Wrangler. Saat pertama kali, jalankan `npx wrangler@3 login` untuk masuk ke akun Cloudflare. Wrangler versi 3 dipakai karena versi 4 butuh Node.js 22.
 
 Domain sendiri (misalnya `.my.id`) bisa ditambahkan di tab **Custom domains** pada proyek `alwibahar` di dashboard Cloudflare.
