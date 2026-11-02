@@ -45,10 +45,12 @@ Tautan langsung bisa dibagikan, misalnya `https://namadomain/#diresepin` membuka
 
 ## Deploy gratis ke Cloudflare Pages
 
-1. Buat repository di GitHub, lalu push folder ini.
-2. Masuk ke Cloudflare, buka **Workers & Pages**, pilih **Create**, lalu **Pages** dan **Connect to Git**.
-3. Pilih repository tadi. Biarkan **Build command** kosong dan isi **Build output directory** dengan `/`.
-4. Klik **Save and Deploy**. Situs langsung bisa diakses di `namaproject.pages.dev`.
-5. (Opsional) Beli domain `.my.id`, lalu tambahkan di tab **Custom domains** proyek Pages tersebut.
+Situs live di https://alwibahar.pages.dev. Untuk memperbarui setelah mengubah isi:
 
-Setiap `git push` berikutnya otomatis memperbarui situs.
+```bash
+npm run deploy
+```
+
+Perintah ini menyalin file situs ke `dist/` lalu mengunggahnya dengan Wrangler. Saat pertama kali, jalankan `npx wrangler login` untuk masuk ke akun Cloudflare.
+
+Domain sendiri (misalnya `.my.id`) bisa ditambahkan di tab **Custom domains** pada proyek `alwibahar` di dashboard Cloudflare.
